@@ -297,7 +297,7 @@ def DoubleJumpAvailable(arrayX,arrayY,blackTurn,array):
         blackTurn *= -1
     return False
 
-def DaMove(blackTurn, board):
+def Move(blackTurn, board):
     goAhead = True
     rawCurX = -1; newCurX = -1
     rawCurY = -1; newCurY = -1
@@ -495,6 +495,5 @@ while moreMoves:
             print("Black wins!")
         moreMoves = False
     else:
-        #INCLUDE NO MORE MOVES POSSIBLE [check]
-        board = DaMove(blackTurn,board)
+        board = Move(blackTurn,board)
         blackTurn *= -1
